@@ -1,0 +1,108 @@
+@media screen and (max-width: 430px) {
+    .ancho{
+        max-width: 390px;
+    }
+
+    header{
+        padding: 0px;
+    }
+
+    .headerContent{
+        gap: 0px;
+    }
+
+    .menuSandwich{
+        width: 100%;
+        padding: 10px 10px;
+
+        & i{
+            display: contents;
+        }
+    }
+
+    .fa-bars{
+        display: contents;
+    }
+
+    nav ul{
+        padding: 10px 0px;
+        gap: 30px;
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+
+    nav ul li .btn{
+        width: 200px;
+    }
+
+    .cover{
+        height: 800px;
+    }
+
+    .modal{
+        width: 95%;
+    }
+
+    .modalBody{
+        gap: 20px;
+        padding: 0 0;
+    }
+
+    .whyDescription{
+        top: 10%;
+    }
+
+    .abilitiesContainer{
+        gap: 25px;
+    }
+
+    .portfolioContent .sectionHeader{
+        width: 300px;
+    }
+
+    .photoContainer{
+        gap: 15px;
+    }
+
+    .services{
+        height: 750px;
+        background-position: center top;
+    }
+
+    .servicesContent{
+        width: 100%;
+    }
+
+    .tabItem{
+        padding: 40px 0%;
+    }
+
+    .tool figure{
+        width: 100px;
+        height: 100px;
+    }
+
+    .acordeon{
+        width: 370px;
+    }
+    .acordeonCard .cardBody{
+        padding-top: 15px;
+    }
+
+    .middleRect{
+        width: 120px;
+        height: 2px;
+        background-color: var(--white);
+    }
+    .footerContent{
+        gap: 30px;
+        flex-direction: column;
+    }
+    .footerNav{
+        align-items: start;
+        & .btnFooter{
+            margin-top: -40px;
+            padding: 15px 40px;
+        }
+    }
+}

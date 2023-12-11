@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <script src='https://kit.fontawesome.com/2ee0245f3d.js' crossorigin='anonymous'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <link rel="stylesheet" href="slidefotos.css">
+    <script src="js/responsiveslides.min.js"></script>
+    <script src="js/carrousel.js"></script>
+    <link rel="stylesheet" href="carrousel.css">
+    <title>Web Developer: Impulsa tu negocio</title>
+
+</head>
+<body>
+    <div id="modalContainer" class="modalContainer">
+        <article id="modal" class="modal">
+            <div class="modalHeader">
+                <i id="btnCloseModal" class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="modalBody">
+                <div class="modalText">
+                    <p class="text-lg">¡Contáctame!</p>
+                    <h2 class="text-4xl">Lleva la imagen de tu empresa a <span class="primaryColor">Otro Nivel.</span></h2>
+                </div>
+
+                <form id="carousel" class="formulario" action="">
+                    <div id="slide-container">
+                        <div class="slide" data-slideIndex="0">
+                            <h3 class="text-xl start">Háblame de tu Proyecto</h3>
+                            <div class="formGroup">
+                                <input required class="formInput" type="text" placeholder="Giro de la Empresa">
+                            </div>
+                           <div class="formGroup">
+                             <textarea required class="formInput formTextArea"  cols="30" rows="10" placeholder="Descripción del Proyecto"></textarea>
+                           </div>
+                           <div class="formGroup formInputIcon">
+                                <input required class="formInput" type="number" placeholder="Presupuesto Estimado">
+                                <i class="inputIcon fa-solid fa-dollar-sign"></i>
+                           </div>
+                           <div class="formGroup formInputIcon">
+                                <input required class="formInput" type="date" placeholder="Fecha de Entrega Estimada">
+                                <i class="inputIcon fa-solid fa-calendar-days"></i>
+                           </div>
+                        </div>
+                        <div class="slide" data-slideIndex="1">
+                            <h3 class="text-xl start">Tus Datos de Contacto</h3>
+                            <div class="formGroup">
+                                <div class="form50">
+                                    <input required class="formInput" type="text" placeholder="Nombre(s)">
+                                </div>
+                                <div class="form50">
+                                    <input required class="formInput" type="text" placeholder="Apellidos">
+                                </div>
+                            </div>
+                            <div class="formGroup">
+                                <input required class="formInput" type="email" placeholder="Correo Electrónico">
+                            </div>
+                            <div class="formGroup">
+                                <input required class="formInput" type="tel" placeholder="Número de Teléfono">
+                            </div>
+                            <div class="formGroup">
+                                <input required type="submit" class="formSubmit text-lg" value="¡Cotiza tu Proyecto!">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide-indicators">
+                        <div id="back-buttonCarrousel" class="slide-indicator"></div>
+                        <div id="forward-buttonCarrousel" class="slide-indicator"></div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modalFooter">
+            </div>
+        </article>
+    </div>
+
+    <div class="upArrow" href="#">
+        <i class="fa-solid fa-chevron-up"></i>
+    </div>
+    <header>
+        <div class="ancho headerContent">
+            <div class="menuSandwich">
+                <a href="index.html">
+                    <img src="img/LogoHor.png" alt="Logo Horizontal">
+                </a>
+                <i id="iconoSandwich" class="fa-solid fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#sectionPortfolio">PORTAFOLIO</a></li>
+                    <li><a href="#sectionServices">SERVICIOS</a></li>
+                    <li><a href="#sectionTools">HERRAMIENTAS</a></li>
+                    <li><a href="#sectionFAQ">FAQ</a></li>
+                    <li>
+                        <a class="btn hvr-bounce-to-right contact" href="#">
+                            <div class="center">
+                                <p>¡QUIERO MI PÁGINA!</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="cover">
+        <div class="ancho coverContent" id="home">
+            <div class="coverText">
+                <div>
+                    <p class="text-lg wow animate__animated animate__backInLeft">¡Hola, soy <span class="secondaryColor">Paco Medina</span>!</p>
+                    <p class="text-base wow animate__animated animate__backInLeft">Tu Web Developer de Confianza</p>
+                </div>
+                <h1 class="wow animate__animated animate__backInLeft"><span class="secondaryColor ">Impulsa</span> el éxito de tu negocio mediante presencia y profesionalismo en internet.</h1>
+                <a class="btn hvr-bounce-to-right" href="#">
+                    <div>
+                        <p>Descargar CV</p>
+                    </div>
+                </a>
+            </div>
+            <div class="coverIMG">
+                <figure class="pacoFigure">
+                    <img src="img/Paco.jpeg" alt="Paco Developer">
+                </figure>
+                <img class="collegeLogo" src="img/itmLogo.png" alt="Logo del Instituto Tecnológico de Mérida">
+            </div>
+        </div>
+        <div class="blackFilter"></div>
+    </section>
+
+    <section class="why" id="sectionWhy">
+        <div class="ancho whyContent">
+            <div class="sectionHeader">
+                <h2>¿Por qué <span class="primaryColor">NECESITAS</span> una página web?</h2>
+            </div>
+            <div class="whyCardContainer">
+                <article class="whyCard wow animate__animated animate__fadeInLeft">
+                    <div class="cardHeader">
+                        <p class="primaryColor">Tu</p>
+                    </div>
+                    <div class="cardBody">
+                        <div class="whyDescription">
+                            <h3 class="text-2xl">Presencia</h3>
+                            <p class="text-sm">ENTRE LA COMPETENCIA</p>
+                            <!-- <p>Una empresa que decide invertir en una página web resalta ante los otros negocios.</p> -->
+                            <p>Resalta ante toda la publicidad tradicional.</p>
+                        </div>
+                    </div>
+                    <div class="cardFooter">
+                        <hr>
+                    </div>
+                </article>
+                <article class="whyCard darkMode wow animate__animated animate__fadeInLeft">
+                    <div class="cardHeader">
+                        <p class="secondaryColor">Negocio</p>
+                    </div>
+                    <div class="cardBody">
+                        <div class="whyDescription">
+                            <h3 class="text-2xl">Profesionalismo</h3>
+                            <p class="text-sm">ANTE TUS CLIENTES</p>
+                            <p>Demuestra la buena calidad de los servicios/productos que ofreces.</p>
+                        </div>
+                    </div>
+                    <div class="cardFooter">
+                        <hr>
+                    </div>
+                </article>
+                <article class="whyCard wow animate__animated animate__fadeInLeft">
+                    <div class="cardHeader">
+                        <p class="primaryColor">en</p>
+                    </div>
+                    <div class="cardBody">
+                        <div class="whyDescription">
+                            <h3 class="text-2xl">Impulsa</h3>
+                            <p class="text-sm">TUS VENTAS</p>
+                            <p>Cotizaciones, citas y pedidos desde tu página web.</p>
+                        </div>
+                    </div>
+                    <div class="cardFooter">
+                        <hr>
+                    </div>
+                </article>
+                <article class="whyCard darkMode wow animate__animated animate__fadeInLeft">
+                    <div class="cardHeader">
+                        <p class="secondaryColor">Internet</p>
+                    </div>
+                    <div class="cardBody">
+                        <div class="whyDescription">
+                            <h3 class="text-2xl">Amplía</h3>
+                            <p class="text-sm">TU MERCADO</p>
+                            <p>¡Tu página se podrá visualizar en cada parte de la Ciudad, Estado, País y del Mundo!.</p>
+                        </div>
+                    </div>
+                    <div class="cardFooter">
+                        <hr>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="abilities" id="sectionAbilities">
+        <div class="ancho abilitiesContent">
+            <div class="sectionHeader">
+                <h2>Mis Habilidades te brindarán <span class="primaryColor">Resultados</span></h2>
+            </div>
+            <div class="abilitiesContainer">
+                <div class="abilityItem">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <p>Comunicación efectiva</p>
+                </div>
+                <div class="abilityItem">
+                    <i class="fa-solid fa-star"></i>
+                    <p>Creatividad</p>
+                </div>
+                <div class="abilityItem">
+                    <i class="fa-solid fa-user"></i>
+                    <p>Interfaz y Experiencia de usuario</p>
+                </div>
+                <div class="abilityItem">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <p>Adaptación a necesidades</p>
+                </div>
+                <div class="abilityItem">
+                    <i class="fa-solid fa-globe"></i>
+                    <p>Optimización de rendimiento web</p>
+                </div>
+            </div>
+            <div class="sectionText">
+                <p class="text-lg">Tu página será <span class="primaryColor text-xl">100%</span> personalizada.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="sectionPortfolio">
+        <div class="ancho portfolioContent">
+            <div class="sectionHeader">
+                <h2>Conoce un poco de <span class="primaryColor">Mi Trabajo</span></h2>
+            </div>
+
+            <div class="photoContainer">
+                <a class="wow animate__animated animate__fadeInLeft" data-fancybox="gallery" data-src="img/CFE.jpg" data-caption="1 Año de Desarrollo en CFE">
+                    <article class="portfolioCard">
+                        <figure class="figureCenter">
+                            <img src="img/CFE.jpg" alt="1 Año de Desarrollo en CFE">
+                        </figure>
+                        <div class="cardFooter">
+                            <p class="text-xl">1 Año de Desarrollo en CFE</p>
+                        </div>
+                    </article>
+                </a>
+                <a class="wow animate__animated animate__fadeInLeft" data-fancybox="gallery" data-src="img/foreverYoung.png" data-caption="Diseño de Menú de Servicios">
+                    <article class="portfolioCard">
+                        <figure>
+                            <img class="imgForeverYoung" src="img/foreverYoung.png" alt="Diseño de Menú de Servicios">
+                        </figure>
+                        <div class="cardFooter">
+                            <p class="text-xl">Diseño de Menú de Servicios</p>
+                        </div>
+                    </article>
+                </a>
+                <a class="wow animate__animated animate__fadeInLeft" data-fancybox="gallery" data-src="img/modeloPlus.png" data-caption="Identidad de Marca para Proyecto">
+                    <article class="portfolioCard">
+                        <figure class="figureCenter">
+                            <img src="img/modeloPlus.png" alt="Identidad de Marca para Proyecto">
+                        </figure>
+                        <div class="cardFooter">
+                            <p class="text-xl">Identidad de Marca para Proyecto</p>
+                        </div>
+                    </article>
+                </a>
+                <a class="wow animate__animated animate__fadeInLeft" data-fancybox="gallery" data-src="img/produEstetic.jpg" data-caption="Creación de Logo">
+                    <article class="portfolioCard">
+                        <figure class="figureCenter">
+                            <img src="img/produEstetic.jpg" alt="Creación de Logo">
+                        </figure>
+                        <div class="cardFooter">
+                            <p class="text-xl">Creación de Logo</p>
+                        </div>
+                    </article>
+                </a>
+                <a class="wow animate__animated animate__fadeInLeft" data-fancybox="gallery" data-src="img/trainingCamp.png" data-caption="Flyer para Training Camp">
+                    <article class="portfolioCard">
+                        <figure>
+                            <img class="imgTrainingCamp" src="img/trainingCamp.png" alt="Flyer para Training Camp">
+                        </figure>
+                        <div class="cardFooter">
+                            <p class="text-xl">Flyer para Training Camp</p>
+                        </div>
+                    </article>
+                </a>
+                <a class="wow animate__animated animate__fadeInLeft" data-fancybox="gallery" data-src="img/rifa.png" data-caption="Promoción de Eventos">
+                    <article class="portfolioCard">
+                        <figure>
+                            <img class="imgTop0" src="img/rifa.png" alt="Promoción de Eventos">
+                        </figure>
+                        <div class="cardFooter">
+                            <p class="text-xl">Promoción de Eventos</p>
+                        </div>
+                    </article>
+                </a>
+                <a class="wow animate__animated animate__fadeInLeft" data-fancybox="gallery" data-src="img/Lona.png" data-caption="Diseño de Lonas">
+                    <article class="portfolioCard">
+                        <figure>
+                            <img class="imgTop0" src="img/Lona.png" alt="Diseño de Lonas">
+                        </figure>
+                        <div class="cardFooter">
+                            <p class="text-xl">Diseño de Lonas</p>
+                        </div>
+                    </article>
+                </a>
+                <a class="wow animate__animated animate__fadeInLeft" data-fancybox="gallery" data-src="img/taller.jpg" data-caption="Flyers para Talleres">
+                    <article class="portfolioCard">
+                        <figure>
+                            <img class="imgFlyerTaller" src="img/taller.jpg" alt="Flyers para Talleres">
+                        </figure>
+                        <div class="cardFooter">
+                            <p class="text-xl">Flyers para Talleres</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </div>
+        <div style="height: 150px; overflow: hidden;" >
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path class="wave" d="M-2.54,117.94 C338.88,176.16 363.01,51.81 505.92,125.84 L505.36,170.24 L0.00,150.00 Z" style="stroke: none;"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="services" id="sectionServices">
+        <div class="ancho servicesContent">
+            <div class="sectionHeader">
+                <h2 class="center">Servicios que ofrezco para Tu Negocio</h2>
+            </div>
+            <div class="callbacks_container">
+                <ul class="rslides" id="sliderFotos">
+                  <li>
+                      <div class="servicesItem">
+                        <i class="fa-solid fa-face-smile-beam"></i>
+                        <div class="servicesItemText">
+                            <p class="text-xl">Diseño</p>
+                            <h3 class="text-3xl">UI/UX</h3>
+                        </div>
+                      </div>
+                      <div class="servicesItem">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <div class="servicesItemText">
+                            <p class="text-xl">Desarrollo de</p>
+                            <h3 class="text-3xl">Páginas Web</h3>
+                        </div>
+                      </div>
+                      <div class="servicesItem">
+                        <i class="fa-solid fa-medal"></i>
+                        <div class="servicesItemText">
+                            <p class="text-xl">Diseño de</p>
+                            <h3 class="text-3xl">Logos</h3>
+                        </div>
+                      </div>
+                  </li>
+                  <li>
+                    <div class="servicesItem">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        <div class="servicesItemText">
+                            <p class="text-xl">Posts de</p>
+                            <h3 class="text-3xl">Publicidad</h3>
+                        </div>
+                    </div>
+                    <div class="servicesItem">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <div class="servicesItemText">
+                            <p class="text-xl">Flyers para</p>
+                            <h3 class="text-3xl">Talleres</h3>
+                        </div>
+                    </div>
+                    <div class="servicesItem">
+                        <i class="fa-solid fa-person-chalkboard"></i>
+                        <div class="servicesItemText">
+                            <p class="text-xl">Diseño de</p>
+                            <h3 class="text-3xl">Lonas</h3>
+                        </div>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools" id="sectionTools">
+        <div class="ancho toolsContent">
+            <div class="sectionHeader">
+                <h2>Herramientas que le dan <span class="primaryColor">vida</span> a tu Página</h2>
+            </div>
+
+            <div class="allTabsContainer">
+                <ul class="tabs">
+                    <li>
+                        <a href="#tabs1">
+                            <div>
+                                <p>Todas</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tabs2">
+                            <div>
+                                <p>Front-End</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tabs3">
+                            <div>
+                                <p>Back-End</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tabs4">
+                            <div>
+                                <p>Development</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tabsContainer">
+                    <div class="tabItem" id="tabs1">
+                        <div class="tool">
+                            <figure>
+                                <img src="img/HTML5.png" alt="HTML">
+                            </figure>
+                            <p class="text-2xl">HTML5</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/CSS3.png" alt="CSS">
+                            </figure>
+                            <p class="text-2xl">CSS3</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/JavaScript.png" alt="JavaScript">
+                            </figure>
+                            <p class="text-2xl">JavaScript</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/PHP.png" alt="PHP">
+                            </figure>
+                            <p class="text-2xl">PHP</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/sqlServer.png" alt="SQL Server">
+                            </figure>
+                            <p class="text-2xl">SQL Server</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/MSSQL.png" alt="MSSQL">
+                            </figure>
+                            <p class="text-2xl">MSSQL</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/visualStudio.png" alt="VS Code">
+                            </figure>
+                            <p class="text-2xl">VS Code</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/XAMPP.png" alt="XAMPP">
+                            </figure>
+                            <p class="text-2xl">XAMPP</p>
+                        </div>
+                    </div>
+                    <div class="tabItem" id="tabs2">
+                        <div class="tool">
+                            <figure>
+                                <img src="img/HTML5.png" alt="HTML">
+                            </figure>
+                            <p class="text-2xl">HTML5</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/CSS3.png" alt="CSS">
+                            </figure>
+                            <p class="text-2xl">CSS3</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/JavaScript.png" alt="JavaScript">
+                            </figure>
+                            <p class="text-2xl">JavaScript</p>
+                        </div>
+                    </div>
+                    <div class="tabItem" id="tabs3">
+                        <div class="tool">
+                            <figure>
+                                <img src="img/JavaScript.png" alt="JavaScript">
+                            </figure>
+                            <p class="text-2xl">JavaScript</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/PHP.png" alt="PHP">
+                            </figure>
+                            <p class="text-2xl">PHP</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/sqlServer.png" alt="SQL Server">
+                            </figure>
+                            <p class="text-2xl">SQL Server</p>
+                        </div>
+                    </div>
+                    <div class="tabItem" id="tabs4">
+                        <div class="tool">
+                            <figure>
+                                <img src="img/MSSQL.png" alt="MSSQL">
+                            </figure>
+                            <p class="text-2xl">MSSQL</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/visualStudio.png" alt="VS Code">
+                            </figure>
+                            <p class="text-2xl">VS Code</p>
+                        </div>
+                        <div class="tool">
+                            <figure>
+                                <img src="img/XAMPP.png" alt="XAMPP">
+                            </figure>
+                            <p class="text-2xl">XAMPP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="videoResponsive" id="sectionVideo">
+        <video class="codingVideo" autoplay loop>
+            <source src="img/codingBackground.mp4" type="video/mp4" >
+        </video>
+    </section>
+
+    <section class="faq" id="sectionFAQ">
+        <div class="ancho faqContent">
+            <div class="sectionHeader">
+                <h2>Preguntas Frecuentes (<span class="primaryColor ">FAQ</span>)</h2>
+            </div>
+            <div class="acordeon">
+                <article class="acordeonCard">
+                    <div class="cardHeader">
+                        <i class="fa-solid fa-square-plus"></i>
+                        <p>¿Cuáles son tus servicios principales como desarrollador web?</p>
+                    </div>
+                    <div class="cardBody">
+                        <p>Ofrezco servicios integrales, desde diseño UI/UX hasta desarrollo web y creación de imagen de empresa.</p>
+                    </div>
+                </article>
+                <article class="acordeonCard">
+                    <div class="cardHeader">
+                        <i class="fa-solid fa-square-plus"></i>
+                        <p>¿Proporcionas capacitación para la gestión del sitio después de la entrega?</p>
+                    </div>
+                    <div class="cardBody">
+                        <p>Sí, incluyo capacitación para que puedas gestionar tu sitio de manera efectiva.</p>
+                    </div>
+                </article>
+                <article class="acordeonCard">
+                    <div class="cardHeader">
+                        <i class="fa-solid fa-square-plus"></i>
+                        <p>¿Cuánto tiempo tardaría el desarrollo de mi página web?</p>
+                    </div>
+                    <div class="cardBody">
+                        <p>El tiempo de desarrollo varía según las necesidades específicas de la página. Será determinado durante la consulta inicial.</p>
+                    </div>
+                </article>
+                <article class="acordeonCard">
+                    <div class="cardHeader">
+                        <i class="fa-solid fa-square-plus"></i>
+                        <p>¿Cómo es tu proceso de trabajo?</p>
+                    </div>
+                    <div class="cardBody">
+                        <p>Iniciamos con una consulta para entender tus necesidades, mantenemos una comunicación constante y organizamos reuniones para revisar avances y asegurar tu satisfacción.</p>
+                    </div>
+                </article>
+                <article class="acordeonCard">
+                    <div class="cardHeader">
+                        <i class="fa-solid fa-square-plus"></i>
+                        <p>¿Cómo es la comunicación durante el desarrollo del proyecto?</p>
+                    </div>
+                    <div class="cardBody">
+                        <p>Mantengo una comunicación abierta y constante contigo. Realizo las correcciones que indiques para asegurarme de que el resultado final esté completamente acorde a tus preferencias y expectativas. Tu satisfacción es mi prioridad.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="ancho footerContent">
+            <img src="img/LogoHor.png" alt="Logo">
+            <div class="middleRect"></div>
+            <div class="footerNav">
+                <ul>
+                    <li><a class="text-xl" href="#home">INICIO</a></li>
+                    <li><a href="#sectionWhy">Páginas Web</a></li>
+                    <li><a href="#sectionAbilities">Habilidades</a></li>
+                </ul>
+                <ul>
+                    <li><a class="text-xl" href="#home">TRABAJO</a></li>
+                    <li><a href="#sectionPortfolio">Portafolio</a></li>
+                    <li><a href="#sectionServices">Servicios</a></li>
+                    <li><a href="#sectionTools">Herramientas</a></li>
+                    <li><a href="#sectionFAQ">FAQ</a></li>
+                </ul>
+                <a class="btnOpenModal btnFooter hvr-bounce-to-right contact" href="#">
+                    <div class="center">
+                        <p>COTIZA TU PROYECTO</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Btn Up Arrow
+        $('.upArrow').click(function() {
+        $('html, body').animate({scrollTop: 0}, 100);
+        return false;
+        });
+
+        // Menu Responsive
+        $("#iconoSandwich").click(function(){
+            $("nav").slideToggle("slow");
+        });
+
+        // Modal
+        const modalContainer = document.querySelector("#modalContainer");
+        $(".contact").click(showModal);
+        $("#btnCloseModal").click(hideModal);
+
+        function showModal(){
+            modalContainer.style.display = "flex";
+        }
+        function hideModal(){
+            modalContainer.style.display = "none";
+        }
+
+        window.onclick = function(e){
+            if(e.target == modalContainer) {
+                hideModal();
+            };
+        }
+
+        // // Opacity Abilities
+        $(".abilityItem").hover(
+            function(){
+            const iconoAbility = $(this).find("i");
+            iconoAbility.css("opacity", "100%");
+            $(".abilityItem").find("i").not(iconoAbility).css("opacity","50%");
+
+            $(".abilityItem").removeClass("scaleHover");
+            $(this).addClass("scaleHover");
+        },
+        function(){
+                $(".abilityItem").find("i").css("opacity", "100%");
+                $(".abilityItem").removeClass("scaleHover");
+            },
+
+        );
+
+        // Slide de Fotos
+        $(function () {
+            $("#sliderFotos").responsiveSlides({
+                auto: false,
+                pager: false,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                  $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                  $('.events').append("<li>after event fired.</li>");
+                }
+            });
+        });
+
+    </script>
+    <script src="js/wow.min.js"></script>
+    <script> new WOW().init(); </script>
+    <script>
+        Fancybox.bind("[data-fancybox]", {
+          });
+    </script>
+    <script>
+        // AllTabsContainer
+            // tabs (Opciones)
+            // tabsContent (Contenidos)
+                // tabItem (cada tab)
+        $(".tabs li:first").addClass("active");
+        $(".tabs li:first").find("a").addClass("active");
+        $(".tabItem").hide();
+        $(".tabItem:first").show();
+        $(".tabs li").click(function(){
+            $(".tabs li").removeClass("active");
+            $(".tabs li").find("a").removeClass("active");
+            $(this).addClass("active");
+            $(this).find("a").addClass("active");
+            $(".tabItem").hide();
+            const tabActual = $(this).find("a").attr("href");
+            $(tabActual).fadeIn();
+        })
+    </script>
+    <script>
+        // ACORDEON
+        // Llamar a JQUERY
+        $(".acordeonCard .cardHeader").click(function(){
+            var t = $(this);
+            var contenido = t.next();
+            var icono = t.children('i');
+
+            $(".acordeonCard .cardBody").not(contenido).slideUp();
+            $(".acordeonCard .cardHeader i").not(icono).removeClass('fa-square-minus').addClass('fa-square-plus');
+
+            icono.toggleClass('fa-square-minus fa-square-plus');
+            contenido.slideToggle();
+        });
+    </script>
+</body>
+</html>
