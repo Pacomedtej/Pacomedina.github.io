@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 :root{
 
     /* Colors */
@@ -16,6 +18,7 @@
 
     --inter: 'Inter', sans-serif;;
     --poppins: 'Poppins', sans-serif;
+    --oswald: 'Oswald', sans-serif;;
 }
 
 /* Text Sizes */
@@ -181,6 +184,7 @@ nav ul li a{
 
 .btn{
     font-family: var(--poppins);
+    font-family: var(--oswald);
     text-decoration: none;
     color: white;
     transition: all 0.3s ease-out;
@@ -192,6 +196,7 @@ nav ul li a{
 
 .btnFooter{
   font-family: var(--poppins);
+  font-family: var(--oswald);
   text-decoration: none;
   color: white;
   transition: all 0.3s ease-out;
