@@ -18,7 +18,7 @@
 
     --inter: 'Inter', sans-serif;;
     --poppins: 'Poppins', sans-serif;
-    --oswald: 'Oswald', sans-serif;;
+    --oswald: 'Oswald', sans-serif;
 }
 
 /* Text Sizes */
@@ -80,6 +80,17 @@ html{
     max-width: 1200px;
     margin: auto;
 }
+
+@media screen and (max-width: 768px) {
+  .ancho{
+    max-width: 740px;
+  }
+
+  header .ancho{
+    max-width: 760px;
+  }
+}
+
 .center{
     text-align: center;
 }
@@ -129,10 +140,16 @@ header{
     align-items: center;
     gap: 180px;
     flex-wrap: wrap;
+    transition: all 0.3s ease-out;
 
     & img{
         width: 160px;
     }
+}
+@media screen and (max-width: 1085px) {
+  .headerContent{
+    gap: 0;
+  }
 }
 
 .menuSandwich{
@@ -184,7 +201,7 @@ nav ul li a{
 
 .btn{
     font-family: var(--poppins);
-    font-family: var(--oswald);
+    /* font-family: var(--oswald); */
     text-decoration: none;
     color: white;
     transition: all 0.3s ease-out;
@@ -196,7 +213,7 @@ nav ul li a{
 
 .btnFooter{
   font-family: var(--poppins);
-  font-family: var(--oswald);
+  /* font-family: var(--oswald); */
   text-decoration: none;
   color: white;
   transition: all 0.3s ease-out;
@@ -403,6 +420,14 @@ nav ul li a{
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    transition: all 0.3s ease-out;
+}
+@media screen and (max-width: 980px) {
+  .whyCardContainer{
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+  }
 }
 
 .whyCard{
@@ -773,9 +798,16 @@ footer{
   align-items: center;
   flex-wrap: wrap;
   gap: 150px;
+  transition: all 0.3s ease-out;
 
   & img{
     width: 160px;
+  }
+}
+
+@media screen and (max-width: 977px) {
+  .footerContent{
+    gap: 15px;
   }
 }
 
